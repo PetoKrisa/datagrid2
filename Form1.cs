@@ -15,6 +15,14 @@ namespace datagrid2
         public Form1()
         {
             InitializeComponent();
+            EredmenyRepository.Path = "osztaly.csv";
+            EredmenyRepository.SkipHeader = true;
+            dataGridView1.DataSource = EredmenyRepository.FindAll();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
